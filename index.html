@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuegoWeb - Triki</title>
+    <title>Juego de Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Juego de Tic-Tac-Toe</h1>
+    </header>
+    <main>
+        <section id="setup">
+            <h2>Configuración del Juego</h2>
+            <form id="gameSetupForm">
+                <div class="form-group">
+                    <label for="playerMode">Modo de Juego:</label>
+                    <select id="playerMode">
+                        <option value="1">Un Jugador</option>
+                        <option value="2">Dos Jugadores</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="player1Color">Color del Jugador 1:</label>
+                    <input type="color" id="player1Color" value="#ff0000">
+                </div>
+                <div class="form-group">
+                    <label for="player1Symbol">Símbolo del Jugador 1:</label>
+                    <select id="player1Symbol">
+                        <option value="X">X</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="form-group" id="player2Options">
+                    <label for="player2Color">Color del Jugador 2:</label>
+                    <input type="color" id="player2Color" value="#0000ff">
+                </div>
+                <button type="button" id="startGameButton">Jugar</button>
+            </form>
+        </section>
+
+        <section id="gameBoard" style="display: none;">
+            <h2>Tablero de Juego</h2>
+            <div class="scoreboard">
+                <div id="player1Score" class="score">
+                    Jugador 1: <span>0</span>
+                </div>
+                <div id="player2Score" class="score">
+                    Jugador 2: <span>0</span>
+                </div>
+            </div>
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button type="button" id="resetGameButton">Reiniciar Juego</button>
+            <button type="button" id="backMenuButton">Volver al Menú</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
